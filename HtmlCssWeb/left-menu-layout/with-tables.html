@@ -1,0 +1,57 @@
+<html>
+<head>
+  <style>
+    .menuTd {
+      width: 200px;
+      min-width: 200px;
+      border: 1px dashed orange;
+    }
+
+    .contentTd {
+      width: 600px;
+      border: 1px dashed orange;
+    }
+
+    .content {
+      background-color: pink;
+      width: 700px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="menuTd">menu here</td>
+      <td class="contentTd">
+        small content here
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td class="menuTd">menu here</td>
+      <td class="contentTd">
+        <table class="content">
+          <tr>
+            <td>
+              big table content here
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td class="menuTd">menu here</td>
+      <td class="contentTd">
+        <div class="content">
+          big div content here
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
