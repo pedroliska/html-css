@@ -1,0 +1,66 @@
+<html>
+<head>
+  <style>
+    .example {
+      position: relative;
+    }
+    .menu {
+      width: 200px;
+      border: 1px dashed orange;
+    }
+
+    .content {
+      position: absolute;
+      /*top: 0;
+      left: 200px;*/
+      display: table-cell;
+      width: 600px;
+      border: 1px dashed orange;
+      /*overflow-x: scroll;*/
+    }
+
+    .pageContent {
+      background-color: pink;
+      width: 700px;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    I could not get the left content div to wrap content (table or div) that was bigger
+    than it. This would not work on current browsers or Firefox 2.0
+  </p>
+  <p>
+    display: table-cell, almost got it to work but it stops working when you make
+    display: absolute. And I think table-cell doesn't work in Firefox 2.0
+  </p>
+  <div class="example">
+      <div class="menu">menu here</div>
+      <div class="content">
+        small content here
+      </div>
+  </div>
+
+  <div class="example">
+      <div class="menu">menu here</div>
+      <div class="content">
+        <table class="pageContent">
+          <tr>
+            <td>
+              big table content here
+            </td>
+          </tr>
+        </table>
+      </div>
+  </div>
+
+  <div class="example">
+      <div class="menu">menu here</div>
+      <div class="content">
+        <div class="pageContent">
+          big div content here
+        </div>
+      </div>
+  </div>
+</body>
+</html>

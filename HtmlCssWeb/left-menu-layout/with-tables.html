@@ -1,18 +1,18 @@
 <html>
 <head>
   <style>
-    .menuTd {
+    .menu {
       width: 200px;
       min-width: 200px;
       border: 1px dashed orange;
     }
 
-    .contentTd {
+    .content {
       width: 600px;
       border: 1px dashed orange;
     }
 
-    .content {
+    .pageContent {
       background-color: pink;
       width: 700px;
     }
@@ -21,8 +21,8 @@
 <body>
   <table>
     <tr>
-      <td class="menuTd">menu here</td>
-      <td class="contentTd">
+      <td class="menu">menu here</td>
+      <td class="content">
         small content here
       </td>
     </tr>
@@ -30,9 +30,9 @@
 
   <table>
     <tr>
-      <td class="menuTd">menu here</td>
-      <td class="contentTd">
-        <table class="content">
+      <td class="menu">menu here, min-width is not enough in firefox 2.0. A div with a width is needed inside this td.</td>
+      <td class="content">
+        <table class="pageContent">
           <tr>
             <td>
               big table content here
@@ -45,9 +45,9 @@
 
   <table>
     <tr>
-      <td class="menuTd">menu here</td>
-      <td class="contentTd">
-        <div class="content">
+      <td class="menu">menu here</td>
+      <td class="content">
+        <div class="pageContent">
           big div content here
         </div>
       </td>
