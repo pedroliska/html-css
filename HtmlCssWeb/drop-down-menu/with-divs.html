@@ -1,0 +1,64 @@
+<html>
+<head>
+  <script src="jquery-1.5.js"></script>
+  <style>
+    #menu {
+      border: 1px solid black;
+      list-style: none;
+            position: relative;
+
+    }
+
+    .mItem {
+      display: table-cell;
+      position: relative;
+      border: 1px dashed orange;
+      height: 100px;
+
+    }
+
+    .mItem a {
+      /*margin: 30px;*/
+    }
+
+    .mChild {
+      /*display: none;*/
+      position: absolute;
+      top: 0px;
+      left: 0;
+      border: 1px solid cyan;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    Some header text here
+  </p>
+  <ul id="menu">
+    <li class="mItem"><a href="">Home/Login</a></li>
+    <li class="mItem"><a href="">Location Search</a></li>
+    <li class="mItem" id="newOrders">
+      <a href="">Place New Orders v</a>
+      <div class="mChild" id="newOrdersSub">
+        asdf
+      </div>
+    </li>
+    <li class="mItem"><a href="">Order History</a></li>
+  </ul>
+  <p>
+    This is the body of the page
+  </p>
+  <script>
+    $(document).ready(function () {
+      var showSubmenu = function (ev) {
+        ev.preventDefault();
+        //$('#newOrdersSub').css('display', 'inline');
+        $('#newOrdersSub').toggle();
+      };
+      //$('#newOrders').hover(showSubmenu);
+      $('#newOrders').click(showSubmenu);
+
+    });
+  </script>
+</body>
+</html>
