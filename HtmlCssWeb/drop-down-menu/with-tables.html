@@ -2,10 +2,6 @@
 <head>
   <script src="jquery-1.5.js"></script>
   <style>
-    #menu {
-      border: 1px solid black;
-    }
-
     .mItem {
       padding: 0 30px;
       border: 1px dashed orange;
@@ -21,7 +17,7 @@
       border: 1px solid brown; 
     }
 
-    .mChild {
+    .newOrdersUl {
       display: none;
       position: absolute;
       top: 50px;
@@ -32,7 +28,7 @@
       margin: 0;
       padding: 0;
     }
-      .mChild li {
+      .newOrdersUl li {
         padding: 4px 10px;
       }
   </style>
@@ -41,14 +37,14 @@
   <p>
     Some header text here
   </p>
-  <table id="menu">
+  <table border="1">
     <tr>
       <td class="mItem"><a href="">Home/Login</a></td>
       <td class="mItem"><a href="">Location Search</a></td>
-      <td class="mItem" id="newOrders">
+      <td class="mItem" id="newOrdersTd">
         <div id="newOrdersDiv" style="">
           <a href="">Place New Orders v</a>
-          <ul class="mChild" id="newOrdersSub">
+          <ul class="newOrdersUl" id="newOrdersSub">
             <li>asdf</li>
             <li>asdf</li>
           </ul>
@@ -67,8 +63,8 @@
         //$('#newOrdersSub').css('display', 'inline');
         $('#newOrdersSub').toggle();
       };
-      $('#newOrders').hover(showSubmenu);
-      $('#newOrders').click(showSubmenu);
+      $('#newOrdersTd').hover(showSubmenu);
+      $('#newOrdersTd').click(showSubmenu);
 
     });
   </script>
